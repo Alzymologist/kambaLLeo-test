@@ -1,0 +1,8 @@
+   let nofoto_image = [ 0,0,0,0,0,95,255,128,0,0,0,0,0,0,0,0,0,127... ];
+    let size_x:i32 = 100;
+    let size_y:i32 = 100;
+    for n in 0..(size_x*size_y) {
+        pixel( n%size_x , n/size_x , size_x, (nofoto_image[(n/8) as usize] & (0b10000000>>(n % 8)) != 0), display);
+    }
+    pr!(1,"No photo with Kampela!",display,"Center");
+    pr!(16," (c) Alzymologist OY",display);

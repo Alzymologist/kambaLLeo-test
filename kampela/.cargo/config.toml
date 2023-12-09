@@ -1,0 +1,12 @@
+[target.thumbv8m.main-none-eabihf]
+rustflags = [
+  "-C", "link-arg=--nmagic",
+  "-C", "link-arg=-Tlink.x",
+  "-C", "link-arg=-Theap.x",
+  "-C", "linker=flip-link",
+#  "-Z", "linker-flavor=ld",
+#  "-Z", "thinlto=no",
+]
+
+[build]
+target = "thumbv8m.main-none-eabihf" # Cortex-M33 (with FPU)
